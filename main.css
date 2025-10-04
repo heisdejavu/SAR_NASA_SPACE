@@ -8,6 +8,14 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+body-about {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: minmax(0,1fr);
+}
+
 /* Загальні стилі для header */
 header {
     background-color: #004d40; /* колір фону */
@@ -213,7 +221,7 @@ header {
 
 
 /* Основний блок */
-.info-section-denis {
+.info-section-relevance {
     text-align: center;
     max-width: 100%;
     margin: 0 auto;
@@ -222,26 +230,26 @@ header {
     position: relative; 
 }
 
-.info-section-denis .content{
+.info-section-relevance .content{
     max-width: 800px; /* Max width for the text */
     margin: 0 auto; /* Center the text */
     text-align: center; /* Center-align the text */
 }
 
-.info-section-denis h2 {
+.info-section-relevance h2 {
     font-size: 2.4em;
     margin-bottom: 20px;
     text-align: center;
 }
 
-.info-section-denis p {
+.info-section-relevance p {
     font-size: 1.3em;
     color: #666;
     line-height: 1.6;
     text-align: center;
 }
 
-.info-section-denis p-name {
+.info-section-relevance p-name {
     font-size: 1.1em;
     color: #666;
     line-height: 1.6;
@@ -269,7 +277,7 @@ header {
 
 
 /* Кнопка Learn More */
-.learn-more-denis {
+.learn-more-relevance {
     padding: 10px 20px;
     background-color: #e7fddf;
     border: 1px solid #666;
@@ -280,7 +288,7 @@ header {
     
 }
 
-.learn-more-denis:hover {
+.learn-more-relevance:hover {
     background-color: #666;
     color: white;
 }
@@ -785,7 +793,7 @@ header {
 }
 
 .meta-info p {
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin-top: 20px;
     text-align: justify;
 }
@@ -1167,6 +1175,9 @@ th {
 
 
     /* FOOTER */
+
+
+
     .footer-container nav {
         flex-direction: column; /* Розташування меню у стовпчик */
         gap: 10px;
@@ -1214,11 +1225,11 @@ th {
         line-height: 1.4;
     }
 
-    .info-section-denis .content h2 {
+    .info-section-relevance .content h2 {
         font-size: 1.6em; /* Зменшений розмір заголовка в info-section */
     }
 
-    .info-section-denis .content p {
+    .info-section-relevance .content p {
         font-size: 1em;
         line-height: 1.4;
     }
@@ -1228,18 +1239,9 @@ th {
         font-size: 1em; /* Зменшений розмір заголовка */
     }
 
-    .image-container-arcgis{
-        width: 100%;
-        height: 300px;
-        margin: 5px auto;
-    }
 
-    .image-container-sepal-raster, .image-container-sepal-vector, .image-container-gee-ndvi, .image-container-gee-ndwi {
-        width: 90%; /* Займає більшу частину ширини екрана на мобільних пристроях */
-        height: 300px;
-        margin: 5px auto;
-        
-    }
+
+
 
     .text-overlay-maps {
         font-size: 1em; /* Зменшений розмір шрифту для тексту на карті */
@@ -1258,7 +1260,7 @@ th {
     }
 
 
-    /* ARCGIS PAGE */
+
 
     .created-app-name h2 {
         display: flex;
@@ -1275,11 +1277,7 @@ th {
         max-height: 400px;
     }
     
-    .gif-container-arcgis {
-        width: 90%; /* Збільшує ширину на мобільних */
-        height: auto;
-        margin-bottom: 5px;
-    }
+
 
     .gif-bg{
         position: relative;
@@ -1313,7 +1311,7 @@ th {
         font-size: 1.2em; /* Зменшений розмір тексту заголовка */
     }
 
-    /* SEPAL PAGE */
+
 
     .created-app-name-duo{
         display: flex;

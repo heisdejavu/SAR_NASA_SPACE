@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Застосунки GEE</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="image_fav/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="image_fav/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="header-container">
+                <h1>Google Earth Engine Застосунки</h1>
+                <nav>
+                    <a href="index.html">Головна Сторінка</a>
+                    <a href="gee.html">Google Earth Engine Застосунки</a>
+                    <a class="active" href="fires.html">Карти пожеж Харківської області</a>         
+                    <a href="about.html">Про проект</a>
+                </nav>
+            </div>
+        </header>
+
+        <div class="hero-section-app">
+            <img src="images/sat_bg1.jpg" alt="Background Image" class="background-image">
+            <div class="text-overlay">
+                <h1>Дослідження наслідків від пожеж. Аналіз знімків в SWIR,NDVI, CO.
+                        Побудова комплексної карти пожеж Харківської області</h1>
+                <p>ТЕКСТ</p>
+            </div>
+        </div>
+
+        <div class = "maps">
+            <div class = "created-app-name-duo">
+                <h2>Галерея зображень</h2>
+            </div>   
+        </div>
+
+        
+        
+                <!-- Container for the image gallery -->
+        <div class="container">
+            
+
+            <!-- Full-width images with number text -->
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <img src="images/fires/1.png" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img src="images/fires/fire_map.jpg" style="width:100%">  
+            </div>
+        
+            <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img src="images/fires/CO.png" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img src="images/fires/AAI.png" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                <img src="images/fires/NDVI.png" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                <img src="images/fires/SWIR.png" style="width:100%">
+            </div>
+
+            
+        
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+            <!-- Image text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+        
+            <!-- Thumbnail images -->
+            <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="images/fires/1.png" style="width:100%" onclick="currentSlide(1)" alt="Вступ">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="images/fires/fire_map.jpg" style="width:100%" onclick="currentSlide(2)" alt="Карта пожеж Харківської області за 2024 рік">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="images/fires/CO.png" style="width:100%" onclick="currentSlide(3)" alt="Дослідження знімків з супутникуа Sentinel-5P в спектрально індексі CO">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="images/fires/AAI.png" style="width:100%" onclick="currentSlide(4)" alt="Дослідження на вміст аерозольних часток в атмосфері в спектральному індексі AAI">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="images/fires/NDVI.png" style="width:100%" onclick="currentSlide(5)" alt="Аналіз території в спектральному індексі NDVI">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="images/fires/SWIR.png" style="width:100%" onclick="currentSlide(6)" alt="Лісовий масив с. Богуславка (Ізюмський район)">
+                </div>
+
+                
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-container">
+
+               <nav>
+                    <ul>
+                        <li><a href="index.html">Головна Сторінка</a></li>
+                        <li><a href="gee.html">Google Earth Engine Застосунки</a></li>
+                        <li><a href="fires.html">Карти пожеж Харківської області</a></li>
+                        <li><a href="about.html">Про проект</a></li>
+                    </ul>
+                </nav>
+
+                <p>Made by MapHammers Team</p>
+                <p>2025 NASA Space Apps Challenge</p>
+            </div>
+        </footer>
+
+        <script src="main.js"></script>
+    </body>
+</html>
