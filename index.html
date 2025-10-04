@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Геопортал самозаліснення</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="image_fav/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="image_fav/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="header-container">
+                <h1>Головна Сторінка</h1>
+                
+                <nav>
+                    <a class="active" href="index.html">Головна Сторінка</a>
+                    <a href="arcgis.html">ArcGIS як Інструмент Візуалізації Самозаліснення</a>
+                    <a href="sepal.html">Sepal.io як Інструмент Візуалізації Місцевості</a>
+                    <a href="gee.html">Google Earth Engine Застосунки</a>
+                    <a href="about.html">Про проект</a>
+                </nav>
+            </div>
+        </header>
+        
+        <div class="hero-section">
+            <img src="images/sat_bg1.jpg" alt="Background Image" class="background-image">
+            <div class="text-overlay">
+                <h1>У радарному дзеркалі: розкриття земних процесів за допомогою SAR</h1>
+                <p-mapHummers>Виконано командою <b>MapHammers</b>: </p-mapHummers>
+                <br>
+                <p-name>СИЧ Роман,</p-name> 
+                <br>
+                <p-name>САУЛ-ГОЗЕ Денис,</p-name>
+                <br>
+                <p-name>ПОДОРОЖКО Катерина,</p-name>
+                <br>
+                <p-name>ВОЛКОВА Карина,</p-name>
+                <br>
+                <p-name>КОНДАЧУК Сніжана,</p-name>
+                <br>
+                <p-name>КИФОРУК Юрій</p-name>
+                
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <div class = "content">
+                <h2>Знайомтесь з командою MapHammers</h2>
+                <p>Використання SAR є об’ємним та надзвичайно цікавим процесом, що дозволяє поєднати різні явища, які відбуваються у світі. 
+                    На геопорталі буде представлено карти змін вод Каховського водосховища, композитні карти для загального ознайомлення, 
+                    а також результати дослідження наслідків пожеж. Передбачено аналіз знімків у SWIR, NDVI та CO та побудову комплексної 
+                    карти пожеж Харківської області</p>
+            </div>
+            <a href="https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Data/S1GRD.html">
+                <button class="learn-more">Дізнатися більше</button>
+            </a>
+        </div>
+
+
+        <!-- MAPS -->
+        <div class = "maps">
+            <div class = "centered-text"> 
+                <h2>Карти самозаліснення</h2>
+            </div>
+            <!-- <div class="side-text-arcgis">ArcGIS</div> -->
+            <div class = "image-container-arcgis">
+                <a href="https://www.arcgis.com/apps/mapviewer/index.html?webmap=85d426041b65496381f916997df7a898" target="_blank"> 
+                    <img src = "images/arcgis.jpg" alt="ArcGIS" class="background-image">
+
+                    <div class = "link-more-map">
+                        <p>Картографічна модель самозаліснення ArcGIS Online</p>
+                    </div>
+                </a>
+                <a href="arcgis.html">
+                    <button class="learn-more-map">Дізнатися більше</button>
+                </a>
+            </div>
+            
+            
+            <div class = "image-container">
+                <!-- <div class="side-text-sepal">Sepal</div> -->
+                <div class = "image-container-sepal-raster">
+                    <a href="qgis2web_raster/index.html" target="_blank">  
+                        <img src = "images/sepal_raster.jpg" alt="Sepal.io" class="background-image">
+
+                        <div class = "link-more-map">
+                            <p>Растрова картографічна візуалізація місцевості Sepal.io</p>
+                        </div>
+                    </a>
+                    <a href="sepal.html">
+                        <button class="learn-more-map">Дізнатися більше</button>
+                    </a>
+                </div>
+
+                <div class = "image-container-sepal-vector">
+                    <a href="qgis2web_vector/index.html" target="_blank">
+                        <img src = "images/sepal_vector.jpg" alt="Sepal.io" class="background-image">
+
+                        <div class = "link-more-map">
+                            <p>Векторна картографічна візуалізація місцевості Sepal.io</p>
+                        </div>
+                    </a>
+                    <a href="sepal.html">
+                        <button class="learn-more-map">Дізнатися більше</button>
+                    </a>
+                </div>
+            </div>
+
+            
+            <div class = "image-container">
+                <!-- <div class="side-text-gee">GEE</div> -->
+                <div class = "image-container-gee-ndvi">
+                    <a href="https://single-being-381900.projects.earthengine.app/view/kahovske-resoir" target="_blank">
+                        <img src = "images/list/g_ndvi_list.jpg" alt="GEE" class="background-image">
+
+                        <div class = "link-more-map">
+                            <p>Додаток GEE - Візуалізація самозаліснення</p>
+                        </div>
+                    </a>
+                    <a href="gee.html">
+                        <button class="learn-more-map">Дізнатися більше</button>
+                    </a>
+                </div>
+
+                <div class = "image-container-gee-ndwi">
+                    <a href="https://single-being-381900.projects.earthengine.app/view/kahovske-water-ndwi" target="_blank">  
+                        <img src = "images/list/g_ndwi_list.jpg" alt="GEE" class="background-image">
+
+                        <div class = "link-more-map">
+                            <p>Додаток GEE - Візуалізація растру NDWI</p>
+                        </div>
+                    </a>
+                    <a href="gee.html">
+                        <button class="learn-more-map">Дізнатися більше</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="info-section-denis">
+            <div class = "content">
+                <h2>Актуальність</h2>
+                <p> </p>
+            </div>
+            <div class = "content">
+                <p-name>Виконав: студент 462м групи, Саул-Гозе Денис Костянтинович</p-name>
+            </div>
+            <div>
+                <a href="https://denissh02.github.io/Diploma_Saul-Hoze/" target="_blank">
+                    <button class="learn-more-denis">Перейти до Геопорталу Моніторингу лісового покриву Харківської області</button>
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-container">
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Головна Сторінка</a></li>
+                        <li><a href="arcgis.html">ArcGIS як Інструмент Візуалізації Самозаліснення</a></li>
+                        <li><a href="sepal.html">Sepal.io як Інструмент Візуалізації Місцевості</a></li>
+                        <li><a href="gee.html">Google Earth Engine Застосунки</a></li>
+                        <li><a href="about.html">Про проект</a></li>
+                    </ul>
+                </nav>
+
+                <nav>
+                    <ul>
+                        <li><a href="https://www.arcgis.com/apps/mapviewer/index.html?webmap=85d426041b65496381f916997df7a898" target="_blank">Карта самозаліснення ArcGIS Online</a></li>
+                        <li><a href="qgis2web_vector/index.html" target="_blank">Карта діджиталізованого шару Sepal.io</a></li>
+                        <li><a href="qgis2web_raster/index.html" target="_blank">Карта растрового шару Sepal.io</a></li>
+                        <li><a href="https://single-being-381900.projects.earthengine.app/view/kahovske-water-ndwi" target="_blank">Додаток GEE - NDWI (водний індекс)</a></li>
+                        <li><a href="https://single-being-381900.projects.earthengine.app/view/kahovske-resoir" target="_blank">Додаток GEE - NDVI (вегетаційний індекс)</a></li>                       
+                    </ul>
+                </nav>
+
+                <p>Національний аерокосмічний університет імені М. Є. Жуковського «Харківський авіаційний інститут»</p>
+                <p>© 2024</p>
+            </div>
+        </footer>
+
+        <script src="main.js"></script>
+    </body>
+</html>

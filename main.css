@@ -1,0 +1,1408 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Загальні стилі для header */
+header {
+    background-color: #004d40; /* колір фону */
+    padding: 5px 5px;
+}
+
+/* Flexbox контейнер для вирівнювання заголовка та навігації */
+.header-container {
+    display: flex;
+    align-items: center; /* вирівнювання по вертикалі */
+    justify-content: space-between;
+    padding: 5px 10px;
+    background-color: #004d40;
+}
+
+/* Стиль заголовка */
+.header-container h1 {
+    font-size: 1.5em;
+    color: white;
+    margin: 0;
+    min-width: 420px;
+}
+
+.header-container a {
+    font-size: 1.1em;
+}
+
+/* Стиль для навігаційного меню */
+.header-container nav {
+    display: flex;   
+    gap: 0px;
+    margin-left: auto ;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Стиль для посилань у меню */
+.header-container nav a {
+    color: rgb(211, 211, 211);
+    text-decoration: none;
+    padding: 10px 9px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+/* Виділення активного пункту меню */
+.header-container nav a.active {
+    background-color: #00796b;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Стиль при наведенні курсору */
+.header-container nav a:hover {
+    background-color: #00695c;
+    border-radius: 5px;
+}
+
+
+/* Стиль для кнопки меню */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Стиль для навігаційного меню */
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+/* Стиль для посилань у меню */
+.nav-menu a {
+    color: rgb(211, 211, 211);
+    text-decoration: none;
+    padding: 10px 9px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+/* Виділення активного пункту меню */
+.nav-menu a.active {
+    background-color: #00796b;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Стиль при наведенні курсору */
+.nav-menu a:hover {
+    background-color: #00695c;
+    border-radius: 5px;
+}
+
+
+/* Основний контейнер для зображення і тексту */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 500px; /* або налаштуйте висоту за потреби */
+    overflow: hidden;
+}
+
+.hero-section img{
+    transition: transform 3.5s ease;
+}
+.hero-section img:hover{
+    transform: scale(1.2);
+}
+
+/* Зображення на фоні */
+.background-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* масштабує зображення, зберігаючи співвідношення сторін */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Текст поверх зображення */
+.text-overlay {
+    position: relative;
+    top: 20%; /*pos 50% відносно батьківського контейнера*/
+    z-index: 2;
+    color: white;
+    text-align: left;
+    max-width: 700px; /* максимальна ширина текстового блоку */
+    padding: 20px;
+    margin: 0 20px;
+}
+
+/* Стилі для заголовка та тексту */
+.text-overlay h1 {
+    font-size: 2.4em;
+    margin: 0;
+}
+
+.text-overlay p {
+    font-size: 1.3em;
+    margin-top: 10px;
+    
+}
+
+.text-overlay p-mapHummers {
+    font-size: 1.7em;
+    margin-top: 10px;
+    
+}
+
+.text-overlay p-name{
+    font-size: 1.5em;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Основний блок */
+.info-section {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    position: relative; 
+    opacity: 0.4;
+    transform: translateY(50px);
+    transition: opacity 0.4s ease, transform 0.4s ease; 
+    visibility: hidden; 
+}
+
+ .info-section.show {
+    opacity: 1;
+    transform: translateY(0px);
+    visibility: visible;
+    z-index: 99;
+}
+
+.info-section .content{
+    max-width: 800px; /* Max width for the text */
+    margin: 0 auto; /* Center the text */
+    text-align: center; /* Center-align the text */
+}
+
+.info-section h2 {
+    font-size: 2.4em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.info-section p {
+    font-size: 1.3em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+/* Основний блок */
+.info-section-denis {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    position: relative; 
+}
+
+.info-section-denis .content{
+    max-width: 800px; /* Max width for the text */
+    margin: 0 auto; /* Center the text */
+    text-align: center; /* Center-align the text */
+}
+
+.info-section-denis h2 {
+    font-size: 2.4em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.info-section-denis p {
+    font-size: 1.3em;
+    color: #666;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.info-section-denis p-name {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Кнопка Learn More */
+.learn-more {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid #666;
+    color: #666;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    
+}
+
+.learn-more:hover {
+    background-color: #666;
+    color: white;
+}
+
+
+
+/* Кнопка Learn More */
+.learn-more-denis {
+    padding: 10px 20px;
+    background-color: #e7fddf;
+    border: 1px solid #666;
+    color: #666;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    
+}
+
+.learn-more-denis:hover {
+    background-color: #666;
+    color: white;
+}
+
+.centered-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.centered-text h2 {
+    font-size: 2.4em;
+}
+
+.learn-more-map {
+    position: absolute; /* Абсолютне позиціонування */
+    top: 10px; /* Відступ від верхнього краю */
+    right: 10px; /* Відступ від правого краю */
+    padding: 8px 12px; /* Відступи всередині кнопки */
+    background-color: #ff6d17; /* Колір фону кнопки */
+    color: white; /* Колір тексту */
+    border: none; /* Без рамки */
+    border-radius: 5px; /* Закруглені кути */
+    font-size: 14px; /* Розмір шрифту */
+    cursor: pointer; /* Зміна курсору на руку при наведенні */
+    transition: background-color 0.3s; /* Плавний перехід кольору */
+    z-index: 10; /* Шар над іншими елементами */
+}
+.learn-more-map:hover {
+    background-color: #666;
+    color: white;
+}
+
+.link-more-map {
+    position: absolute; /* Абсолютне позиціонування */
+    bottom: 10px; /* Відступ від нижнього краю */
+    left: 10px; /* Відступ від лівого краю */
+    padding: 8px 12px; /* Відступи всередині кнопки */
+    background-color: #0b8032; /* Колір фону кнопки */
+    color: white; /* Колір тексту */
+    border: none; /* Без рамки */
+    border-radius: 5px; /* Закруглені кути */
+    font-size: 14px; /* Розмір шрифту */
+    cursor: pointer; /* Зміна курсору на руку при наведенні */
+    transition: background-color 0.3s; /* Плавний перехід кольору */
+    z-index: 99; /* Шар над іншими елементами */
+}
+.link-more-map:hover {
+    background-color: #666;
+    color: white;
+}
+
+
+
+.maps{
+    background: #f9f9f9;
+    padding: 20px;
+}
+
+.image-container-arcgis{
+    position: relative;
+    width: 60.1%;
+    height: 200px; 
+    overflow: hidden;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    margin-left: 20%;
+    display: flex;
+    border: 1px solid #666;
+}
+
+.image-container-arcgis img{
+    transition: transform 0.3s ease;
+}
+.image-container-arcgis img:hover{
+    transform: scale(1.1);
+}
+
+
+.text-overlay-maps {
+    position: relative;
+    text-decoration: none;
+    top: 138px; 
+    color: white;
+    text-align: left;
+    max-width: auto; /* максимальна ширина текстового блоку */
+    padding: 20px;
+    margin: 0 0px;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 99;
+}
+
+.text-overlay-maps h3{
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+}
+
+.image-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; /* Вирівнювання по верхньому краю */
+    margin: 5px 0 0 0; /* Відступи зверху та знизу */
+}
+
+.image-container img{
+    transition: transform 0.3s ease;
+}
+.image-container img:hover{
+    transform: scale(1.1);
+}
+
+.image-container-sepal-raster{
+    position: relative;
+    width: 30%;
+    height: 200px; /* або налаштуйте висоту за потреби */
+    overflow: hidden;
+    margin-bottom: 5px;
+    margin-left: 19.9%;
+    border: 1px solid #666;
+}
+
+.image-container-sepal-vector{
+    position: relative;
+    width: 30%;
+    height: 200px; /* або налаштуйте висоту за потреби */
+    overflow: hidden;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    /* margin-left: -50%; */
+    border: 1px solid #666;
+}
+
+.image-container-gee-ndvi{
+    position: relative;
+    width: 30%;
+    height: 200px; /* або налаштуйте висоту за потреби */
+    overflow: hidden;
+    margin-bottom: 40px;
+    margin-left: 19.9%;
+    border: 1px solid #666;
+}
+
+.image-container-gee-ndwi{
+    position: relative;
+    width: 30%;
+    height: 200px; /* або налаштуйте висоту за потреби */
+    overflow: hidden;
+    margin-bottom: 40px;
+    margin-left: 5px;
+    border: 1px solid #666;
+}
+
+
+.side-text-arcgis{
+    writing-mode: vertical-rl;
+    transform: rotate(0deg);
+    /* transform: translateY(50px) rotate(180deg); */
+    font-size: 24px;
+    font-weight: bold;
+    color: #666;
+    position: absolute;
+    top: 1105px;
+    left: 230px;
+    margin: 20px;
+    text-align: center;
+    z-index: 99;
+    font-size: 3em;
+
+    opacity: 0.4;
+    transform: translateY(50px);
+    transition: opacity 0.4s ease, transform 0.4s ease; 
+    visibility: hidden; 
+}   
+
+.side-text-sepal{
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 24px;
+    font-weight: bold;
+    color: #666;
+    position: absolute;
+    top: 1320px;
+    left: 1180px;
+    margin: 20px;
+    text-align: center;
+    z-index: 99;
+    font-size: 3em;
+    opacity: 0.4;
+    transform: translateY(50px);
+    transition: opacity 0.4s ease, transform 0.4s ease; 
+    visibility: hidden; 
+}
+
+.side-text-gee{
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 24px;
+    font-weight: bold;
+    color: #666;
+    position: absolute;
+    top: 1550px;
+    left: 230px;
+    margin: 20px;
+    text-align: center;
+    z-index: 99;
+    font-size: 3em;
+    opacity: 0.4;
+    transform: translateY(50px);
+    transition: opacity 0.4s ease, transform 0.4s ease; 
+    visibility: hidden; 
+}
+
+.side-text-arcgis.show, .side-text-sepal.show, .side-text-gee.show{
+    opacity: 1;
+    transform: translateY(0px);
+    visibility: visible;
+    z-index: 99;
+}
+
+.footer-container {
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container nav {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.footer-container nav ul {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+}
+
+.footer-container nav ul li {
+    margin: 0 10px; /* Add horizontal spacing between items */
+}
+
+.footer-container  a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 9px;
+    font-weight: 600;
+    font-size: 1.0em;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+/* Стиль при наведенні курсору */
+.footer-container a:hover {
+    background-color: #666;
+    border-radius: 5px;
+}
+
+.footer-container p {
+    margin: 3px;
+    font-size: 0.9em;
+}
+
+/* Для сторінки додатків: */
+.hero-section-app {
+    position: relative;
+    width: 100%;
+    height: 400px; /* або налаштуйте висоту за потреби */
+    overflow: hidden;
+}
+
+.hero-section-app img{
+    transition: transform 3.5s ease;
+}
+.hero-section-app img:hover{
+    transform: scale(1.2);
+}
+
+.created-app-name{
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 1.4em;
+    color: #666;
+}
+
+.gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 0; /* Відступи зверху та знизу */
+}
+
+.gif-container-arcgis{
+    position: relative;
+    width: 70%;
+    height: 450px; 
+    overflow: hidden;
+    margin-bottom: 5px;
+    border: 1px solid #666;
+}
+
+.gif-bg{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.gif-container img{
+    transition: transform 0.3s ease;
+    
+}
+
+.gif-container img:hover{
+    transform: scale(1.01);
+}
+
+.text-overlay-maps-arcgis {
+    position: relative;
+    top: -60px; 
+    min-width: 710px;
+    color: white;
+    text-align: left;
+    max-width: auto; 
+    padding: 20px;
+    margin: 0 0px;
+    font-size: 0.9em;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    z-index: 99;
+}
+
+.gif-container:hover .text-overlay-maps-arcgis{
+    opacity: 1;
+}
+
+.click-above{
+    position: relative;
+    margin: 5px;
+    text-align: center;
+    font-size: 0.6;
+    color: #666;
+}
+
+
+.map-description{
+    display: flex;
+    flex-direction: column;
+    margin: 10px; 
+    padding: 30px;
+    font-size: 1.2em;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.map-description p{
+    text-align: justify;
+    font-size: 1.3em;
+    /* max-width: 1300px; */
+}
+
+.map-description h1{
+    margin: 5px;
+    font-size: 1.4em;
+    text-align: center;
+    /* max-width: 1300px; */
+}
+
+.created-app-name-duo{
+    display: flex;
+    margin: 5px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    justify-content: center;
+    font-size: 1.4em;
+    color: #666;
+}
+
+.gif-container-duo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0 0 0; 
+}
+
+.gif-bg-duo {
+    position: relative;
+    width: 100%;
+    height: 400px; 
+    overflow: hidden;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.gif-container-duo img{
+    transition: transform 0.3s ease;
+}
+
+.gif-container-duo img:hover{
+    transform: scale(1.01);
+}
+
+
+.image-one-duo{
+    position: relative;
+    width: 45%;
+    height: 400px; /* або налаштуйте висоту за потреби */
+    overflow: hidden;
+    margin-bottom: 5px;
+    border: 1px solid #666;
+}
+
+.image-two-duo{
+    position: relative;
+    width: 45%;
+    height: 400px; /* або налаштуйте висоту за потреби */
+    overflow: hidden;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    border: 1px solid #666;
+}
+
+.text-overlay-maps-one {
+    position: absolute;
+    top: 85%; /*pos 50% відносно батьківського контейнера*/
+    min-width: 630px;
+    z-index: 2;
+    color: white;
+    text-align: left;
+    max-width: auto; /* максимальна ширина текстового блоку */
+    padding: 20px;
+    margin: 0 0px;
+    font-size: 0.9em;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    z-index: 99;
+}
+
+.text-overlay-maps-two {
+    position: absolute;
+    top: 85%; /*pos 50% відносно батьківського контейнера*/ 
+    min-width: 630px;
+    z-index: 2;
+    color: white;
+    text-align: left;
+    max-width: auto; /* максимальна ширина текстового блоку */
+    padding: 20px;
+    margin: 0 0px;
+    font-size: 0.9em;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    z-index: 99;
+}
+
+.image-one-duo:hover .text-overlay-maps-one{
+    opacity: 1;
+}
+.image-two-duo:hover .text-overlay-maps-two{
+    opacity: 1;
+}
+
+/* Для сторінки про проект: */
+.about-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+/* Стиль для інформаційних блоків */
+.project-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.meta-info, .author-info {
+    width: 45%;
+}
+
+.meta-info h3, .image-gallery h3 {
+    margin-bottom: 10px;
+    margin-top: 5px;
+    font-size: 18px;
+    font-size: 1.6em;
+    text-align: center;
+}
+
+.author-info p{
+    font-size: 1.3em;
+    margin-top: 20px;
+}
+
+.meta-info p {
+    font-size: 1.3em;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.author-info p-name{
+    font-size: 1.3em;
+    margin-top: 2px;
+    font-style: italic;
+}
+
+.author-info a{
+    color: black;
+    text-decoration: none;
+}
+
+.author-info a:hover{
+    color: #666;
+}
+
+.interest-link{
+    text-align: justify;
+    margin-left: 0px;
+}
+
+.interest-link h2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 2.4em;
+}
+
+.interest-link a{
+    color: black;
+    text-decoration: none;
+}
+
+.interest-link a:hover{
+    color: #666;
+}
+
+.links-my-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.links-my-page p{
+    margin-top: 9px;
+    text-align: justify;
+    font-size: 1.3em;
+}
+
+.image-header{
+    margin: 5px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.image-header h2{
+    font-size: 2.4em;
+}
+
+/* Галерея зображень */
+*{
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+    position: relative;  
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.table-container {
+    display: flex;
+    justify-content: space-between; /* Розташування таблиць з відступами між ними */
+    gap: 20px; /* Відступ між таблицями */
+    margin: 20px; /* Відступи навколо контейнера */
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.table-1{
+    width: 50%;
+}
+
+.table-2{
+    width: 25%;
+}
+
+.table-3{
+    width: 25%;
+}
+
+.table-title{
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+
+.gee-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0 0 0; 
+    /* height: 650px;  */
+}
+
+.gee-bg {
+    position: relative;
+    width: 100%;
+    height: 400px; 
+    overflow: hidden;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.image-one-gee{
+    position: relative;
+    width: 100%;
+    height: 500px; /* або налаштуйте висоту за потреби */
+    overflow: hidden;
+    margin-bottom: 5px;
+    margin-left: 50px;
+    
+}
+
+.image-two-gee{
+    position: relative;
+    width: 100%;
+    height: 500px; /* або налаштуйте висоту за потреби */
+    overflow: hidden;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 50px;
+    /* margin-left: -50%; */
+}
+
+.graph-container-gee{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0 0 0; 
+    border: 1px solid #666;
+}
+
+@media (max-width: 1400px) {
+    .table-container{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding: auto;
+        margin: 0 auto;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    .table-1, .table-2, .table-3{
+        width: 90%;
+        
+    }
+
+    .table-title{
+        font-size: 1em; /* Зменшений розмір шрифту заголовка таблиці */
+        justify-content: center;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 999px) {
+    /* Загальні стилі для header */
+    .header-container {
+        flex-direction: column; /* Переключаємо на вертикальне розташування */
+        align-items: center; 
+        justify-content: center;
+        margin: 0 auto;
+        padding: 10px;
+        gap: 10px;
+    }
+    
+    .header-container h1 {
+        font-size: 1.2em; /* Зменшуємо розмір заголовка */
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    
+    .header-container nav {
+        flex-direction: column;
+        width: 100%; /* Займає всю ширину */
+        display: flex;
+        justify-content: space-around; /* Рівномірний розподіл пунктів меню */
+        flex-wrap: wrap; /* Переходить на наступний рядок при потребі */
+        gap: 5px;
+    }
+    
+    .header-container nav a {
+        font-size: 0.9em; /* Зменшуємо розмір шрифту для пунктів меню */
+        padding: 8px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav-menu a {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        border-top: 1px solid #ddd;
+    }
+}
+
+/* Адаптація */
+/* Для екранів з шириною менше 768px */
+@media (max-width: 768px) {
+
+    /* Загальні стилі для header */
+    .header-container {
+        flex-direction: column; /* Переключаємо на вертикальне розташування */
+        align-items: center; 
+        justify-content: center;
+        margin: 0 auto;
+        padding: 10px;
+        gap: 10px;
+    }
+    
+    .header-container h1 {
+        font-size: 1.2em; /* Зменшуємо розмір заголовка */
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    
+    .header-container nav {
+        flex-direction: column;
+        width: 100%; /* Займає всю ширину */
+        display: flex;
+        justify-content: space-around; /* Рівномірний розподіл пунктів меню */
+        flex-wrap: wrap; /* Переходить на наступний рядок при потребі */
+        gap: 5px;
+    }
+    
+    .header-container nav a {
+        font-size: 0.9em; /* Зменшуємо розмір шрифту для пунктів меню */
+        padding: 8px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav-menu a {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        border-top: 1px solid #ddd;
+    }
+
+
+    /* FOOTER */
+    .footer-container nav {
+        flex-direction: column; /* Розташування меню у стовпчик */
+        gap: 10px;
+    }
+    
+    .footer-container nav ul {
+        flex-direction: column; /* Переводить список у вертикальний вигляд */
+    }
+    
+    .footer-container nav ul li {
+        margin: 5px 0; /* Вертикальний відступ між пунктами меню */
+    }
+    
+    .footer-container a {
+        font-size: 0.9em; /* Зменшуємо розмір шрифту */
+        padding: 8px;
+    }
+
+    .footer-container p {
+        font-size: 0.8em; /* Зменшений шрифт для тексту у футері */
+    }
+
+    /* HELLO GEOPORTAL */
+    .hero-section {
+        height: auto; /* Зменшена висота на мобільних */
+        padding: 30px;
+    }
+
+    .text-overlay {
+        max-width: 90%; /* Зменшена ширина на мобільних */
+        font-size: 1em; /* Зменшений розмір шрифту */
+        padding: 10px;
+    }
+
+    .text-overlay h1 {
+        font-size: 1.8em; /* Зменшений заголовок */
+    }
+    
+    .info-section .content h2 {
+        font-size: 1.6em; /* Зменшений розмір заголовка в info-section */
+    }
+
+    .info-section .content p {
+        font-size: 1em;
+        line-height: 1.4;
+    }
+
+    .info-section-denis .content h2 {
+        font-size: 1.6em; /* Зменшений розмір заголовка в info-section */
+    }
+
+    .info-section-denis .content p {
+        font-size: 1em;
+        line-height: 1.4;
+    }
+
+    /* MAPS */
+    .centered-text h2 {
+        font-size: 1em; /* Зменшений розмір заголовка */
+    }
+
+    .image-container-arcgis{
+        width: 100%;
+        height: 300px;
+        margin: 5px auto;
+    }
+
+    .image-container-sepal-raster, .image-container-sepal-vector, .image-container-gee-ndvi, .image-container-gee-ndwi {
+        width: 90%; /* Займає більшу частину ширини екрана на мобільних пристроях */
+        height: 300px;
+        margin: 5px auto;
+        
+    }
+
+    .text-overlay-maps {
+        font-size: 1em; /* Зменшений розмір шрифту для тексту на карті */
+        padding: 5px;
+        top: 250px;
+    }
+
+    .learn-more-map {
+        font-size: 0.8em; /* Зменшений розмір шрифту кнопки */
+        padding: 5px 8px;
+    }
+
+    .link-more-map {
+        font-size: 0.9em; /* Зменшений розмір шрифту кнопки */
+        padding: 5px 8px;
+    }
+
+
+    /* ARCGIS PAGE */
+
+    .created-app-name h2 {
+        display: flex;
+        font-size: 1.5em; /* Зменшення розміру заголовка */
+        
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+
+    .gif-container {
+        display: flex;
+        /* padding: 30px; */
+        max-height: 400px;
+    }
+    
+    .gif-container-arcgis {
+        width: 90%; /* Збільшує ширину на мобільних */
+        height: auto;
+        margin-bottom: 5px;
+    }
+
+    .gif-bg{
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: auto;
+        max-height: 450px; 
+        margin: 0 auto;
+        
+    }
+
+    .text-overlay-maps-arcgis {
+        font-size: 0.8em; /* Зменшений шрифт на текстовому блоці */
+        padding: 5px;
+        opacity: 1;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        min-width: 210px;
+    }
+
+    .click-above p {
+        font-size: 0.9em; /* Зменшений шрифт */
+    }
+
+    .map-description {
+        font-size: 1em; /* Зменшений розмір тексту для опису */
+        margin: 10px;
+    }
+
+    .map-description h1 {
+        font-size: 1.2em; /* Зменшений розмір тексту заголовка */
+    }
+
+    /* SEPAL PAGE */
+
+    .created-app-name-duo{
+        display: flex;
+        font-size: 1.5em; /* Зменшення розміру заголовка */
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+
+    .gif-container-duo{
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-items: flex-end;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .image-one-duo, .image-two-duo{
+        width: 90%; /* Збільшує ширину на мобільних */
+        height: auto;
+        /* height: 300px;  */
+        overflow: hidden;
+        /* margin-left: 30px; */
+        margin-right: 5%;
+    }
+
+    .gif-bg-duo {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: auto;
+        max-height: 400px; 
+        margin: 0 auto;
+    }
+
+    .map-description{
+        font-size: 1em; /* Зменшений розмір тексту для опису */
+        margin: 10px;
+    }
+
+
+    .map-description h1{
+        font-size: 1.2em; /* Зменшений розмір тексту заголовка */
+    }
+
+    
+
+    .text-overlay-maps-one, .text-overlay-maps-two {
+        display: flex;
+        font-size: 0.8em; /* Зменшений шрифт на текстовому блоці */
+        padding: 5px;
+        opacity: 1;
+        margin-left: 5%;
+        min-width: 110px;
+        max-width: 340px;
+        
+    }
+
+    .table-container{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding: auto;
+        margin: 0 auto;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    .table-1, .table-2, .table-3{
+        width: 90%;
+        
+    }
+
+    .table-title{
+        font-size: 1em; /* Зменшений розмір шрифту заголовка таблиці */
+        justify-content: center;
+    }
+
+    /* GEE PAGE */
+
+    .gee-container {
+        display: flex;
+        width: 90%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        justify-items: center;
+    }
+
+}
